@@ -1,17 +1,39 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Owino Secrets | Ladies Boutique</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
 
-<header>
-    <h1>Owino Secrets</h1>
-    <p>Elegant. Confident. You.</p>
+{% block content %}
+
+<section class="hero">
+    <img src="{% static 'images/logo.png' %}" alt="Owino Secrets Logo">
+    <h1>Elegance. Confidence. You.</h1>
+    <p>Premium ladies boutique for the mordern Woman</p>
+
     <a href="{% url 'products' %}" class="btn-primary">Shop Now</a>
-</header>
+</section>
 
-</body>
-</html>
+<section class="categories">
+    <h2>What We Sell</h2>
+
+    <div class="category-grid">
+        <div class="card">Bras</div>
+        <div class="card">Seamless Panties</div>
+        <div class="card">Ladies Sandals</div>
+        <div class="card">Earrings & Lip Gloss</div>
+        <div class="card">Dresses</div>
+        <div class="card">Custom Crochet Outfits</div>
+        <div class="card">Kids Underpants</div>
+        <div class="card">Bathing Gloves & Clear Bra Straps</div>
+    </div>
+</section>
+
+<section class="why-us">
+    <h2>Why Choose Owino Secrets?</h2>
+    <ul>
+        <li>✔ Quality & Comfort</li>
+        <li>✔ Stylish & Modern Designs</li>
+        <li>✔ Nationwide Delivery</li>
+        <li>✔ Trusted Ladies Boutique</li>
+    </ul>
+</section>
+
+{% endblock %}

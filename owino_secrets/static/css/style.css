@@ -1,0 +1,99 @@
+:root {
+    --gold: #D4AF37;
+    --black: #000000;
+    --cream: #F5E6C8;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Navbar */
+.navbar {
+     background-color: #000;
+    border-bottom: 1px solid #222;
+}
+
+.navbar a {
+    color: var(--gold);
+    text-decoration: none;
+    margin-left: 20px;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    color: var(--gold);
+    font-size: 3rem;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+/* Categories */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: var(--cream);
+    color: var(--black);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
