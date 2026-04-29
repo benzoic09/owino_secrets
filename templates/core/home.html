@@ -3,12 +3,20 @@
 
 {% block content %}
 
-<section class="hero">
-    <img src="{% static 'images/logo.png' %}" alt="Owino Secrets Logo">
-    <h1>Elegance. Confidence. You.</h1>
-    <p>Premium ladies boutique for the mordern Woman</p>
 
+<section class="hero-slider">
+  <!-- Slides -->
+  
+<div class="slide active" data-bg="{% static 'images/d1.jpeg' %}"></div>
+  <div class="slide" data-bg="{% static 'images/d2.jpg' %}"></div>
+  <div class="slide" data-bg="{% static 'images/d3.jpg' %}"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <h1>Elegance. Confidence. You.</h1>
+    <p>Premium ladies boutique for the modern woman</p>
     <a href="{% url 'products' %}" class="btn-primary">Shop Now</a>
+  </div>
 </section>
 
 <section class="categories">
@@ -35,5 +43,6 @@
         <li>✔ Trusted Ladies Boutique</li>
     </ul>
 </section>
+
 
 {% endblock %}
