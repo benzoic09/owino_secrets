@@ -137,25 +137,75 @@ body {
 }
 
 /* Categories */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 40px;
+
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #000;
 }
 
-.card {
-  background: var(--cream);
+.pill {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  background: var(--gold);
   color: var(--black);
-  padding: 20px;
+}
+
+/* Why us*/
+
+.why-us {
+  padding: 80px 20px;
   text-align: center;
-  border-radius: 10px;
+}
+
+.why-us h2 {
+  color: var(--gold);
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.why-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 30px 20px;
+  border-radius: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.why-card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
 
