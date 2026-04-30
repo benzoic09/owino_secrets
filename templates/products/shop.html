@@ -7,42 +7,38 @@
   <h1 class="shop-title">Shop</h1>
 
   <!-- Category Filters -->
-  <div class="shop-filters">
-    #All</a>
-    #Bras</a>
-    #Panties</a>
-    #Dresses</a>
-    #Sandals</a>
-    #Accessories</a>
-  </div>
+
+<div class="shop-filters">
+  <a href= "/shop/" class="filter-pill {% if not active_category %}active{% endif %}">All
+  </a>
+
+  {% for category in categories %}
+    <a href= "/shop/?category={{ category.slug }}"
+       class="filter-pill {% if active_category == category.slug %}active{% endif %}">
+       {{ category.name }}
+    </a>
+  {% endfor %}
+</div>
+
 
   <!-- Product Grid -->
   
 <div class="product-grid">
   {% for product in products %}
     <div class="product-card">
-      <div class="product-image" data-bg="{{ product.image.url }}"></div>
+<div class="product-image" data-bg="{{ product.image.url }}"></div>
 
-      <h3>{{ product.name }}</h3>
-      <p class="price">KES {{ product.price }}</p>
+  <h3>{{ product.name }}</h3>
+  <p class="price">KES {{ product.price }}</p>
 
-      #View</a>
-    </div>
+  <a href="{% url 'product_detail' product.id %}" class="btn-secondary">View</a>
+</div>
+
   {% empty %}
     <p>No products available at the moment.</p>
   {% endfor %}
 </div>
 
-
-    <!-- <div class="product-card">
-      <div class="product-image" data-bg="{% static 'images/sample2.jpg' %}"></div>
-      <h3>Elegant Dress</h3>
-      <p class="price">KES 3,800</p>
-      #View</a>
-    </div>
-
-  </div> -->
 </section>
 
 {% endblock %}
-``

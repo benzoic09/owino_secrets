@@ -22,6 +22,11 @@ class Product(models.Model):
         return self.name
     
 
+    def save(self, *args, **kwargs):
+        self.is_available = self.stock > 0
+        super().save(*args, **kwargs)
+
+
 # class ProductSize(models.Model):
 #     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 #     size = models.CharField(max_length=10)
