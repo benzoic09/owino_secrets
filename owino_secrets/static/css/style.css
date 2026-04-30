@@ -215,3 +215,97 @@ footer {
     padding: 20px;
     background: #111;
 }
+
+/* shop */
+.shop-page {
+  padding: 120px 20px 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.shop-title {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+/* Filters */
+.shop-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-pill {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #111;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.product-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--black);
+}

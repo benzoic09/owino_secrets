@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="shop-page">
+  <h1 class="shop-title">Shop</h1>
+
+  <!-- Category Filters -->
+  <div class="shop-filters">
+    #All</a>
+    #Bras</a>
+    #Panties</a>
+    #Dresses</a>
+    #Sandals</a>
+    #Accessories</a>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+
+    <div class="product-card">
+      <<div class="product-image" data-bg="{% static 'images/sample1.jpg' %}"></div>
+      <h3>Seamless Bra</h3>
+      <p class="price">KES 2,500</p>
+      #View</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" data-bg="{% static 'images/sample2.jpg' %}"></div>
+      <h3>Elegant Dress</h3>
+      <p class="price">KES 3,800</p>
+      #View</a>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+``
