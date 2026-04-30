@@ -1,7 +1,14 @@
 from django.contrib import admin
+from .models import Category, Product
 
-from .models import Category, Product, ProductSize
 
-admin.site.register(Category)
-admin.site.register(Product)
-admin.site.register(ProductSize)
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ("name", "category", "price", "is_available")
+    list_filter = ("category", "is_available")
+    search_fields = ("name",)
