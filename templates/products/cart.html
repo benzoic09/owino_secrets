@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="cart-page">
+  <h1>Your Cart</h1>
+
+  {% for item in cart_items %}
+    <div class="cart-item">
+      <p>{{ item.product.name }} X {{ item.qty }}</p>
+      <p>KES {{ item.subtotal }}</p>
+      {% url 'remove_from_cart' item.product.id %}Remove</a>
+    </div>
+  {% empty %}
+    <p>Your cart is empty.</p>
+  {% endfor %}
+
+  <h3>Total: KES {{ total }}</h3>
+</section>
+{% endblock %}

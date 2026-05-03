@@ -21,9 +21,11 @@
             <li><a href="{% url 'shop' %}">Shop</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'cart' %}">
+            Cart ({{ request.session.cart|length|default:0 }})</a></li>
         </ul>
-    </div>
-</nav>
+        </div>
+    </nav>
 
 
     <!-- PAGE CONTENT -->
