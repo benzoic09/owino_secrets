@@ -15,6 +15,7 @@
       {% if product.stock > 0 %}
         <p class="in-stock">In stock</p>
         
+
 <form method="post" action="{% url 'add_to_cart' product.id %}">
   {% csrf_token %}
 
@@ -29,10 +30,19 @@
     class="qty-input"
   />
 
+  
+<div class="detail-actions">
   <button type="submit" class="btn-primary">
     Add to Cart
   </button>
+
+  <a href="{% url 'cart' %}" class="btn-primary">
+    View Cart
+  </a>
+</div>
+
 </form>
+
 
       {% else %}
         <p class="out-stock">Out of stock</p>

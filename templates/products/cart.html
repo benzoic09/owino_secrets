@@ -29,10 +29,18 @@
     <div class="cart-summary">
       <h2>Total: <span>KES {{ total }}</span></h2>
 
-      <a href="https://wa.me/2547XXXXXXXX?text=Hello%20I%20would%20like%20to%20order.%20Total:%20KES%20{{ total }}"
-         class="btn-primary checkout-btn">
-        Checkout via WhatsApp
-      </a>
+      
+<a class="btn-primary"
+   href="https://wa.me/2547XXXXXXXX?text=
+   Hello%20I%20would%20like%20to%20order:%0A
+   {% for item in cart_items %}
+   {{ item.product.name }} x {{ item.qty }} - KES {{ item.subtotal }}%0A
+   {% endfor %}
+   Total:%20KES%20{{ total }}"
+   target="_blank">
+   Checkout via WhatsApp
+</a>
+
     </div>
 
   {% else %}

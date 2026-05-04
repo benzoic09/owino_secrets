@@ -209,6 +209,18 @@ body {
 }
 
 
+.detail-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.detail-actions .btn-secondary {
+  padding: 12px 28px;
+}
+
+
+
 /* Footer */
 footer {
     text-align: center;
@@ -308,4 +320,92 @@ footer {
 .btn-secondary:hover {
   background: var(--gold);
   color: var(--black);
+}
+
+/* Cart Page */
+.cart-page {
+  max-width: 900px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+
+.cart-title {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+/* Cart cards */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-card {
+  background: #111;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #222;
+}
+
+.cart-info h3 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+}
+
+.cart-meta {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.cart-actions {
+  text-align: right;
+}
+
+.cart-subtotal {
+  display: block;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.remove-btn {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+/* Summary */
+.cart-summary {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+}
+
+.cart-summary span {
+  color: var(--gold);
+}
+
+.checkout-btn {
+  display: inline-block;
+}
+
+/* Empty */
+.empty-cart {
+  text-align: center;
+  margin-top: 60px;
+  color: #aaa;
 }
