@@ -29,9 +29,22 @@
 <div class="product-image" data-bg="{{ product.image.url }}"></div>
 
   <h3>{{ product.name }}</h3>
+  <p class="description">{{ product.description }}</p>
   <p class="price">KES {{ product.price }}</p>
 
-  <a href="{% url 'product_detail' product.id %}" class="btn-secondary">View</a>
+  
+<div class="product-actions">
+  <a href="{% url 'product_detail' product.id %}" class="btn-secondary">
+    View
+  </a>
+
+  {% if product.stock > 0 %}
+    <a href="{% url 'add_to_cart' product.id %}" class="btn-secondary">
+      Add to Cart
+    </a>
+  {% endif %}
+</div>
+
 </div>
 
   {% empty %}

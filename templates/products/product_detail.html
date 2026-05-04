@@ -14,10 +14,26 @@
 
       {% if product.stock > 0 %}
         <p class="in-stock">In stock</p>
-        <form method="post" action="{% url 'add_to_cart' product.id %}">
-          {% csrf_token %}
-          <button class="btn-primary">Add to Cart</button>
-        </form>
+        
+<form method="post" action="{% url 'add_to_cart' product.id %}">
+  {% csrf_token %}
+
+  <label for="qty">Quantity</label>
+  <input
+    type="number"
+    name="qty"
+    id="qty"
+    value="1"
+    min="1"
+    max="{{ product.stock }}"
+    class="qty-input"
+  />
+
+  <button type="submit" class="btn-primary">
+    Add to Cart
+  </button>
+</form>
+
       {% else %}
         <p class="out-stock">Out of stock</p>
       {% endif %}

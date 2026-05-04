@@ -27,11 +27,16 @@ def product_detail(request, id):
     return render(request, 'products/product_detail.html', {'product': product})
 
 
+
 def add_to_cart(request, product_id):
+    qty = int(request.POST.get('qty', 1))
     cart = request.session.get('cart', {})
-    cart[str(product_id)] = cart.get(str(product_id), 0) + 1
+
+    cart[str(product_id)] = cart.get(str(product_id), 0) + qty
     request.session['cart'] = cart
-    return redirect('shop')
+
+    return redirect('cart')
+
 
 
 def cart_view(request):

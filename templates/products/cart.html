@@ -1,19 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <section class="cart-page">
-  <h1>Your Cart</h1>
+  <h1 class="cart-title">Your Cart</h1>
 
-  {% for item in cart_items %}
-    <div class="cart-item">
-      <p>{{ item.product.name }} X {{ item.qty }}</p>
-      <p>KES {{ item.subtotal }}</p>
-      {% url 'remove_from_cart' item.product.id %}Remove</a>
+  {% if cart_items %}
+    <div class="cart-list">
+      {% for item in cart_items %}
+        <div class="cart-card">
+          <div class="cart-info">
+            <h3>{{ item.product.name }}</h3>
+            <p class="cart-meta">
+              KES {{ item.product.price }} × {{ item.qty }}
+            </p>
+          </div>
+
+          <div class="cart-actions">
+            <span class="cart-subtotal">KES {{ item.subtotal }}</span>
+            <a href="{% url 'remove_from_cart' item.product.id %}" class="remove-btn">
+              Remove
+            </a>
+          </div>
+        </div>
+      {% endfor %}
     </div>
-  {% empty %}
-    <p>Your cart is empty.</p>
-  {% endfor %}
 
-  <h3>Total: KES {{ total }}</h3>
+    <div class="cart-summary">
+      <h2>Total: <span>KES {{ total }}</span></h2>
+
+      <a href="https://wa.me/2547XXXXXXXX?text=Hello%20I%20would%20like%20to%20order.%20Total:%20KES%20{{ total }}"
+         class="btn-primary checkout-btn">
+        Checkout via WhatsApp
+      </a>
+    </div>
+
+  {% else %}
+    <p class="empty-cart">Your cart is empty.</p>
+  {% endif %}
 </section>
+
 {% endblock %}
