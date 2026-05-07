@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^pqdvl=q-yo5gp$mnjljd5m^z)nqvm)!kw(59*^qlaa9($5zjd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['owinosecrets.co.ke', 'www.owinosecrets.co.ke']
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'owino_secrets' / 'static'
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
