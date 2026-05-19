@@ -1,0 +1,35 @@
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3955934 was killed by signal: 15, core dumped: no
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3955978 was killed by signal: 15, core dumped: no
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3958870 was killed by signal: 15, core dumped: no
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3958898 was killed by signal: 15, core dumped: no
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3963414 was killed by signal: 15, core dumped: no
+  File "/home/owinosec/owino_secrets/passenger_wsgi.py", line 10
+    ``
+    ^
+SyntaxError: invalid syntax
+[UID:3019][3955743] Child process with pid: 3963435 was killed by signal: 15, core dumped: no
+[UID:3019][3241708] Child process with pid: 3241956 was killed by signal: 15, core dumped: no
